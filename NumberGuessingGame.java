@@ -8,9 +8,9 @@ public class NumberGuessingGame{
         int maxRound = 6;
         int score = 0;
         System.out.println("------- Welcome to the Number Guessing Game -------");
-        System.out.println("            ----Instructions----");
+        System.out.println("\n            ----Instructions----");
         System.out.println("You have to guess a number between 1 to 100");
-        System.out.println("You have only 6 attempts to guess the  number");
+        System.out.println("You have only 6 attempts to guess the  number\n\n");
         System.out.println("Let's Start");
 
         int round = 0;
@@ -23,7 +23,7 @@ public class NumberGuessingGame{
             boolean correctGuess = false;
             while(attemptsLeft>0){
                 System.out.println("Round " + round);
-                System.out.println("Enter your guess: ");
+                System.out.print("Enter your guess: ");
                 int guess = scanner.nextInt();
                 if(guess == numberToGuess){
                     System.out.println("Correct You have guessed the number right.");
@@ -39,6 +39,7 @@ public class NumberGuessingGame{
 
                 attemptsLeft--;
                 System.out.println("Attempts left: "+ attemptsLeft);
+                System.out.println();
             }
             if(!correctGuess){
                 System.out.println("You have no attempts left! The number was: " + numberToGuess);
